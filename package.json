@@ -1,0 +1,73 @@
+{
+  "name": "webpack-starter-kit",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Ruslan Aliyev <zdarova.slavyane@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "serve": "webpack serve --env MODE=development",
+    "build": "webpack --env MODE=production",
+    "lint": "eslint src/**/*.js --fix"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "es2021": true,
+      "jquery": true
+    },
+    "extends": [
+      "airbnb-base"
+    ],
+    "parser": "@babel/eslint-parser",
+    "settings": {
+      "import/resolver": {
+        "alias": {
+          "map": [
+            [
+              "@",
+              "."
+            ],
+            [
+              "Assets",
+              "./src/assets"
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
+    "autoprefixer": "^10.2.4",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.0.2",
+    "cssnano": "^4.1.10",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "1.3.2",
+    "html-webpack-plugin": "^5.1.0",
+    "mini-css-extract-plugin": "^1.3.6",
+    "postcss": "^8.2.6",
+    "postcss-loader": "^5.0.0",
+    "sass": "^1.32.7",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  }
+}
