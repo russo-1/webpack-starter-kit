@@ -1,4 +1,5 @@
 module.exports = {
+  target: 'web',
   devtool: 'eval-cheap-module-source-map',
   devServer: {
     port: 8080,

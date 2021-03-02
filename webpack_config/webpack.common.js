@@ -7,7 +7,6 @@ const ROOT = path.resolve(__dirname, '..');
 
 module.exports = {
   mode: 'development',
-  target: 'web',
   context: ROOT,
   entry: {
     main: './src/index.js',
