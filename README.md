@@ -1,4 +1,4 @@
-# test
+# webpack-starter-kit
 
 ## Project setup
 ```
