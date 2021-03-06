@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "webpack serve --env MODE=development",
-    "build": "webpack --env MODE=production",
+    "build": "webpack --env MODE=production && postcss dist/assets/css/*.css -d dist/assets/css/",
     "lint": "eslint src/**/*.js --fix"
   },
   "browserslist": [
@@ -60,6 +60,7 @@
     "html-webpack-plugin": "^5.1.0",
     "mini-css-extract-plugin": "^1.3.6",
     "postcss": "^8.2.6",
+    "postcss-cli": "^8.3.1",
     "postcss-loader": "^5.0.0",
     "sass": "^1.32.7",
     "sass-loader": "^11.0.1",
