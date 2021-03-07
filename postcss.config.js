@@ -1,9 +1,9 @@
 /* eslint-disable global-require */
 /* eslint-disable import/no-extraneous-dependencies */
 
-module.exports = {
+module.exports = ({ env }) => ({
   plugins: [
-    require('cssnano'),
+    env === 'production' ? require('cssnano') : null,
     require('autoprefixer'),
   ],
-};
+});
