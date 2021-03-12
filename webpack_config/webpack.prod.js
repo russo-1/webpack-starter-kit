@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -56,6 +57,19 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: 'assets/css/[name].[contenthash:8].css',
+    }),
+    new ImageMinimizerPlugin({
+      minimizerOptions: {
+        plugins: [
+          ['svgo', {
+            plugins: [
+              {
+                removeViewBox: false,
+              },
+            ],
+          }],
+        ],
+      },
     }),
   ],
 };
